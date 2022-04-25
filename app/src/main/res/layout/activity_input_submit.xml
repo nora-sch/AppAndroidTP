@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/marg_dice"
+    tools:context=".InputSubmitActivity">
+<EditText
+    android:id="@+id/saisie"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/marg_dice"
+    android:paddingTop="160dp"
+
+    />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/submit_button"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:layout_margin="@dimen/marg_dice"
+        android:background="@color/dark_blue"
+        app:layout_constraintTop_toBottomOf="@+id/saisie"
+        app:layout_constraintLeft_toLeftOf="@+id/saisie"
+        app:layout_constraintRight_toRightOf="@+id/saisie"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
