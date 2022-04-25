@@ -5,10 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InputMainActivity">
-<Button
+
+<androidx.appcompat.widget.AppCompatButton
     android:id="@+id/button"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:textColor="@color/white"
+    android:background="@color/dark_blue"
+    android:textSize="@dimen/btn_text"
+    android:layout_margin="@dimen/marg_dice"
     android:text="@string/lancer_page_saisie"
     android:onClick="lancerPageSaisie"
     app:layout_constraintBottom_toBottomOf="parent"
@@ -23,10 +28,21 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marg_dice"
         android:visibility="invisible"
-        style="@android:style/Widget.ProgressBar.Large"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large.Inverse"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintLeft_toLeftOf="@+id/button"
         app:layout_constraintRight_toRightOf="@+id/button"
            />
+
+    <TextView
+        android:id="@+id/text_received"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/btn_text"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintLeft_toLeftOf="@+id/spinner"
+        app:layout_constraintRight_toRightOf="@+id/spinner"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
