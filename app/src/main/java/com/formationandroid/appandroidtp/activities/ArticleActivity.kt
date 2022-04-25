@@ -1,11 +1,11 @@
-package com.formationandroid.appandroidtp
+package com.formationandroid.appandroidtp.activities
 
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ScrollView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.formationandroid.appandroidtp.R
 
 
 class ArticleActivity : AppCompatActivity() {

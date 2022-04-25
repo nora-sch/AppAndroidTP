@@ -1,16 +1,14 @@
-package com.formationandroid.appandroidtp
+package com.formationandroid.appandroidtp.activities
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
-import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.AppCompatButton
+import com.formationandroid.appandroidtp.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,7 +17,7 @@ import kotlinx.coroutines.withContext
 class InputMainActivity : AppCompatActivity() {
 
     companion object{
-        const val TAG = "res";
+       // const val TAG = "res";
     }
 
     private lateinit var spinner : ProgressBar;
@@ -54,9 +52,8 @@ class InputMainActivity : AppCompatActivity() {
     }
 
     private fun shareData() {
-        //Log.i(TAG, "SHARE is HERE")
         val intent = Intent(Intent.ACTION_SEND);
-        Log.i(TAG, "$retour")
+       // Log.i(TAG, "$retour")
         intent.putExtra(Intent.EXTRA_TEXT, retour);
         intent.type = "text/plain";
 
