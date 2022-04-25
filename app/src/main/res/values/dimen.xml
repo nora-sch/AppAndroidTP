@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <dimen name="text_dice">48</dimen>
+   <dimen name="text_dice">48sp</dimen>
     <dimen name="size_dice">80dp</dimen>
     <dimen name="marg_dice">8dp</dimen>
 </resources>

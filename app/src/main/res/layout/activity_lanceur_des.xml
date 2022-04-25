@@ -6,10 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".LanceurDesActivity">
 
-<TextView
-     android:layout_width="@dimen/size_dice"
+    <TextView
+    android:id="@+id/first_dice"
+    android:layout_width="@dimen/size_dice"
     android:layout_height="@dimen/size_dice"
-
+    android:background="@color/dark_blue"
+    android:text="1"
+    android:textColor="@color/white"
+    android:textSize="@dimen/text_dice"
+    android:layout_margin="@dimen/marg_dice"
+    android:gravity="center"
+    app:layout_constraintBottom_toTopOf="@id/second_dice"
+        app:layout_constraintLeft_toLeftOf="@id/second_dice"
+        app:layout_constraintRight_toRightOf="@id/second_dice"
     />
+
+    <TextView
+    android:id="@+id/second_dice"
+    android:layout_width="@dimen/size_dice"
+    android:layout_height="@dimen/size_dice"
+    android:background="@color/dark_blue"
+    android:text="2"
+    android:textColor="@color/white"
+    android:textSize="@dimen/text_dice"
+    android:layout_margin="@dimen/marg_dice"
+    android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/third_dice"
+        android:layout_width="@dimen/size_dice"
+        android:layout_height="@dimen/size_dice"
+        android:background="@color/dark_blue"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_dice"
+        android:layout_margin="@dimen/marg_dice"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/second_dice"
+        app:layout_constraintLeft_toLeftOf="@id/second_dice"
+        app:layout_constraintRight_toRightOf="@id/second_dice"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
