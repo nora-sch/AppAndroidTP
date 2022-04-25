@@ -19,11 +19,12 @@ import kotlinx.coroutines.withContext
 class InputMainActivity : AppCompatActivity() {
 
     companion object{
-       // const val TAG = "res";
+        const val TAG = "res";
     }
 
     private lateinit var spinner : ProgressBar;
     private lateinit var btn : AppCompatButton;
+    var retour : String? = null;
     var actionDone : Boolean = false;
 
 
@@ -33,7 +34,7 @@ class InputMainActivity : AppCompatActivity() {
 
         spinner = findViewById(R.id.spinner);
         btn = findViewById(R.id.button);
-        val retour = intent.getStringExtra("value");
+        retour = intent.getStringExtra("value");
 
         if(retour != null){
             actionDone = true;
@@ -54,7 +55,17 @@ class InputMainActivity : AppCompatActivity() {
 
     private fun shareData() {
         //Log.i(TAG, "SHARE is HERE")
+        val intent = Intent(Intent.ACTION_SEND);
+        Log.i(TAG, "$retour")
+        intent.putExtra(Intent.EXTRA_TEXT, retour);
+        intent.type = "text/plain";
 
+        // demande et personnalisation de la boite de dialogue pour afficher le choix chaque fois
+        val chooser = Intent.createChooser(intent, "Envoyer à ")
+
+        if(intent.resolveActivity(packageManager) != null){
+            startActivity(chooser);
+        }
     }
 
     fun doStartSpinner(){
