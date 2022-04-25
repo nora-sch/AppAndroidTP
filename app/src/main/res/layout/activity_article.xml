@@ -4,33 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".ArticleActivity">
 
     <ScrollView
+        android:id="@+id/scroll_view_article"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        >
-            <TextView
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-29dp">
+
+        <TextView
             android:id="@+id/article"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="20dp"
             android:gravity="left"
+            android:paddingBottom="100dp"
             android:text="@string/article_1"
             android:textSize="18sp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="349dp" />
     </ScrollView>
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_web"
+        android:id="@+id/btn_retour"
         android:layout_height="wrap_content"
         android:layout_width="0dp"
         android:background="@color/dark_blue"
         android:textColor="@color/white"
         android:text="Retour"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintWidth_percent="1"/>
+        app:layout_constraintWidth_percent="1"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
