@@ -1,3 +1,13 @@
 package com.formationandroid.appandroidtp.bo
 
-data class Memo (val libelle: String);
+import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
+
+@Entity(tableName = "memos")
+@Parcelize
+class Memo (
+    @PrimaryKey(autoGenerate = true)
+    val memoId: Int,
+    val libelle: String): Parcelable;

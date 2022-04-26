@@ -17,11 +17,11 @@ class MemoAdapter(private var listeMemos: MutableList<Memo>) : RecyclerView.Adap
     inner class MemoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val textViewLibelleMemo: TextView = itemView.findViewById(R.id.memo_item);
         val deleteImageButtonMemo: ImageButton = itemView.findViewById(R.id.delete_memo);
-        // Listener pour chaque memo pour récuperer les données d'un meme (plus tard l'id poour pouvoir le supprimer, modifier)
+        // Listener pour chaque memo pour récuperer les données d'un meme (plus tard l'id pour pouvoir le supprimer, modifier)
         init{
             deleteImageButtonMemo.setOnClickListener{
                 val memo = listeMemos[adapterPosition];
-                Toast.makeText(itemView.context, memo.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(itemView.context, memo.libelle, Toast.LENGTH_SHORT).show();
             }
         }
     }
