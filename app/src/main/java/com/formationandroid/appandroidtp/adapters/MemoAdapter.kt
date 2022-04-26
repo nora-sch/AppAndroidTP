@@ -1,5 +1,6 @@
 package com.formationandroid.appandroidtp.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,4 +42,11 @@ class MemoAdapter(private var listeMemos: MutableList<Memo>) : RecyclerView.Adap
         listeMemos.add(0, memo);
         notifyItemInserted(0);
     }
+@SuppressLint("NotifyDataSetChanged")
+    fun updateMemos(listeMemos: MutableList<Memo>) {
+        this.listeMemos = listeMemos;
+        notifyDataSetChanged();
+    }
+
+
 }

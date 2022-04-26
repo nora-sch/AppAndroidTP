@@ -7,7 +7,7 @@ import com.formationandroid.appandroidtp.bo.Memo
 abstract class MemosDAO {
 
     @Query("SELECT * FROM memos")
-    abstract fun getListeMemos() : List<MemosDAO>;
+    abstract fun getListeMemos() : List<Memo>;
 
     @Insert
     abstract fun insert(vararg memos : Memo);

@@ -7,5 +7,7 @@ import com.formationandroid.appandroidtp.dao.MemosDAO
 
 @Database(entities = [Memo::class], version  = 1)
 abstract class AppDatabaseMemo : RoomDatabase(){
+
     abstract fun memosDAO() : MemosDAO;
+
 }
