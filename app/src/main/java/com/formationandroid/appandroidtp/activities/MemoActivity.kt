@@ -30,10 +30,6 @@ class MemoActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this);
         recyclerView.layoutManager = layoutManager;
 
-       // val listeMemos: MutableList<Memo> = ArrayList();
-        // for (a in 1..30){
-        //    listeMemos.add(Memo("Memo : $a"));
-       // }
         val listeMemos = AppDatabaseMemoHelper.getDatabase(this).memosDAO().getListeMemos();
 
         // Adapter :
@@ -44,17 +40,16 @@ class MemoActivity : AppCompatActivity() {
 
     fun addMemo(view: View) {
         val textSaisieField : EditText = findViewById(R.id.add_memo_text);
-        val textSaisie = textSaisieField.text;
-        //val memo = Memo(textSaisie.toString());
-        //memoAdapter.ajouterMemo(memo);
+        val textSaisie = textSaisieField.text.toString();
+            if(textSaisie != "") {
+                val memo = Memo(0, textSaisie);
+                AppDatabaseMemoHelper.getDatabase(this).memosDAO().insert(memo);
 
-        val memo = Memo(0, textSaisie.toString());
-        AppDatabaseMemoHelper.getDatabase(this).memosDAO().insert(memo);
+                val listeMemos = AppDatabaseMemoHelper.getDatabase(this).memosDAO().getListeMemos();
+                memoAdapter.updateMemos(listeMemos.toMutableList());
 
-        val listeMemos = AppDatabaseMemoHelper.getDatabase(this).memosDAO().getListeMemos();
-        memoAdapter.updateMemos(listeMemos.toMutableList());
-
-        recyclerView.smoothScrollToPosition(0);
-        textSaisieField.setText("");
+                recyclerView.smoothScrollToPosition(0);
+                textSaisieField.setText("");
+            }
     }
 }

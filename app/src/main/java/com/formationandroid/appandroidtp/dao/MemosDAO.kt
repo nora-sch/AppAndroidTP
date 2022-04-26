@@ -6,7 +6,7 @@ import com.formationandroid.appandroidtp.bo.Memo
 @Dao
 abstract class MemosDAO {
 
-    @Query("SELECT * FROM memos")
+    @Query("SELECT * FROM memos ORDER BY memos.memoId DESC")
     abstract fun getListeMemos() : List<Memo>;
 
     @Insert
