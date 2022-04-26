@@ -38,6 +38,6 @@ class MemoActivity : AppCompatActivity() {
     fun addMemo(view: View) {
         val textSaisieField : EditText = findViewById(R.id.add_memo_text);
         val textSaisie = textSaisieField.text;
-        Toast.makeText(this, textSaisie, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, textSaisie, Toast.LENGTH_SHORT).show();
     }
 }

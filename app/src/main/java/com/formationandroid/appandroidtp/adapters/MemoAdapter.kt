@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.formationandroid.appandroidtp.R
@@ -16,6 +17,13 @@ class MemoAdapter(private var listeMemos: MutableList<Memo>) : RecyclerView.Adap
     inner class MemoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val textViewLibelleMemo: TextView = itemView.findViewById(R.id.memo_item);
         val deleteImageButtonMemo: ImageButton = itemView.findViewById(R.id.delete_memo);
+        // Listener pour chaque memo pour récuperer les données d'un meme (plus tard l'id poour pouvoir le supprimer, modifier)
+        init{
+            deleteImageButtonMemo.setOnClickListener{
+                val memo = listeMemos[adapterPosition];
+                Toast.makeText(itemView.context, memo.toString(), Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MemoViewHolder {
