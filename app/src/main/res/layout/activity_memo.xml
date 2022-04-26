@@ -4,18 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/page_padding"
     tools:context=".activities.MemoActivity">
-
+    <EditText
+        android:id="@+id/add_memo_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toLeftOf="@+id/add_memo_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/add_memo_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_memo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/dark_blue"
+        android:onClick="addMemo"
+        android:text="Ajouter"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/liste_memo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-
-
+        app:layout_constraintTop_toBottomOf="@+id/add_memo_btn"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
