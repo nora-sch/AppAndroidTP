@@ -12,12 +12,16 @@ import com.formationandroid.appandroidtp.adapters.MemoAdapter
 import com.formationandroid.appandroidtp.bo.Memo
 
 class MemoActivity : AppCompatActivity() {
+
+    private lateinit var memoAdapter : MemoAdapter;
+    private lateinit var recyclerView: RecyclerView;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_memo)
 
         // Liste :
-        val recyclerView : RecyclerView = findViewById(R.id.liste_memo);
+        recyclerView = findViewById(R.id.liste_memo);
 
         recyclerView.setHasFixedSize(true);
 
@@ -30,7 +34,7 @@ class MemoActivity : AppCompatActivity() {
         }
 
         // Adapter :
-        val memoAdapter = MemoAdapter(listeMemos);
+        memoAdapter = MemoAdapter(listeMemos);
         recyclerView.adapter = memoAdapter;
 
     }
@@ -38,6 +42,10 @@ class MemoActivity : AppCompatActivity() {
     fun addMemo(view: View) {
         val textSaisieField : EditText = findViewById(R.id.add_memo_text);
         val textSaisie = textSaisieField.text;
-        Toast.makeText(this, textSaisie, Toast.LENGTH_SHORT).show();
+        val memo = Memo(textSaisie.toString());
+        memoAdapter.ajouterMemo(memo);
+
+        recyclerView.smoothScrollToPosition(0);
+        textSaisieField.setText("");
     }
 }

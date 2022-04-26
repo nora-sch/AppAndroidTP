@@ -37,4 +37,8 @@ class MemoAdapter(private var listeMemos: MutableList<Memo>) : RecyclerView.Adap
 
     override fun getItemCount(): Int  = listeMemos.size;
 
+    fun ajouterMemo(memo: Memo){
+        listeMemos.add(0, memo);
+        notifyItemInserted(0);
+    }
 }
