@@ -12,7 +12,7 @@ Carrot cake marzipan apple pie powder soufflé donut. Halvah topping candy canes
 
     <string name="lancer_page_saisie">Lancer la page de saisie</string>
     <string name="submit_button">Valider</string>
-    <string name="fa_icon_areachart">&#xf1fe;</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="libelle_memo">MEMO</string>
+    <string name="default_text">Hello</string>
+    <string name="legende_favori">Vous avez appuié sur l\'étoile</string>
 </resources>

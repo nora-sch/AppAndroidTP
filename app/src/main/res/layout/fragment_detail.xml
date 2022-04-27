@@ -13,7 +13,7 @@
         android:textColor="@color/dark_blue"
         android:textSize="@dimen/memo_text"
         android:gravity="start"
-        android:text="@string/hello_blank_fragment"
+        android:text="@string/default_text"
         />
 
 </FrameLayout>

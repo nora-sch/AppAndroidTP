@@ -38,5 +38,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_memo_btn"
         />
+<TextView
+    android:id="@+id/legende_favori"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded"
+    android:alpha="0.5"
+    android:textSize="@dimen/btn_text"
+    android:padding="@dimen/page_padding"
+    android:layout_margin="@dimen/marg_dice"
+    android:textColor="@color/white"
+    android:gravity="center"
+    android:visibility="invisible"
+    android:radius="5dp"
+    android:fontFamily="@font/grandhotel_regular"
+    android:text="@string/legende_favori"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

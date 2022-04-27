@@ -11,9 +11,11 @@
         android:theme="@style/Theme.AppAndroidTP">
         <activity
             android:name=".activities.DetailMemoActivity"
+            android:label="@string/libelle_memo"
             android:exported="false" />
         <activity
             android:name=".activities.MemoActivity"
+            android:label="@string/libelle_memo"
             android:exported="true" />
         <activity
             android:name=".activities.InputMainActivity"

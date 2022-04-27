@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/noras/AndroidStudioProjects/AppAndroidTP/app/src/main/res/drawable/bg_rounded.xml" value="0.134" />
         <entry key="..\:/Users/noras/AndroidStudioProjects/AppAndroidTP/app/src/main/res/drawable/delete_btn.xml" value="0.1355" />
         <entry key="..\:/Users/noras/AndroidStudioProjects/AppAndroidTP/app/src/main/res/layout-land/activity_lanceur_des.xml" value="0.1574074074074074" />
         <entry key="..\:/Users/noras/AndroidStudioProjects/AppAndroidTP/app/src/main/res/layout-land/activity_memo.xml" value="0.21516754850088182" />
@@ -16,6 +17,7 @@
         <entry key="..\:/Users/noras/AndroidStudioProjects/AppAndroidTP/app/src/main/res/layout/activity_memo.xml" value="0.264" />
         <entry key="..\:/Users/noras/AndroidStudioProjects/AppAndroidTP/app/src/main/res/layout/fragment_detail.xml" value="0.264" />
         <entry key="..\:/Users/noras/AndroidStudioProjects/AppAndroidTP/app/src/main/res/layout/item_memo.xml" value="0.264" />
+        <entry key="..\:/Users/noras/AndroidStudioProjects/AppAndroidTP/app/src/main/res/menu/memo_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
