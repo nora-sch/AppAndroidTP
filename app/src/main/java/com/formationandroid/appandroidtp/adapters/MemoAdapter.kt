@@ -1,6 +1,7 @@
 package com.formationandroid.appandroidtp.adapters
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
 import com.formationandroid.appandroidtp.R
+import com.formationandroid.appandroidtp.activities.DetailMemoActivity
 import com.formationandroid.appandroidtp.bo.Memo
 import com.formationandroid.appandroidtp.metier.bdd.AppDatabaseMemoHelper
 
@@ -23,15 +25,20 @@ class MemoAdapter(private var listeMemos: MutableList<Memo>) : RecyclerView.Adap
         // Listener pour chaque memo pour récuperer les données d'un memo
         init{
             textViewLibelleMemo.setOnClickListener{
-                val memoId = listeMemos[adapterPosition].memoId;
+                val memo = listeMemos[adapterPosition];
                 val preferences = PreferenceManager.getDefaultSharedPreferences(itemView.context);
                 val editor = preferences.edit();
-                editor.putInt("idMemo", memoId);
+                editor.putInt("idMemo", memo.memoId);
                 editor.apply();
+
+                // lancement d'activité de détail memo :
+                val intent = Intent(itemView.context, DetailMemoActivity::class.java);
+                intent.putExtra(DetailMemoActivity.EXTRA_MEMO, memo);
+                itemView.context.startActivity(intent);
             }
             deleteImageButtonMemo.setOnClickListener{
                 val memo = listeMemos[adapterPosition];
-                Toast.makeText(itemView.context, memo.libelle, Toast.LENGTH_SHORT).show();
+                Toast.makeText(itemView.context, "\""+memo.libelle + "\" a été supprimé!", Toast.LENGTH_SHORT).show();
                 AppDatabaseMemoHelper.getDatabase(itemView.context).memosDAO().delete(memo);
                 listeMemos = AppDatabaseMemoHelper.getDatabase(itemView.context).memosDAO().getListeMemos().toMutableList();
                 updateMemos(listeMemos);

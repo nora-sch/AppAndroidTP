@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 
 @Entity(tableName = "memos")
 @Parcelize
-class Memo (
+data class Memo (
     @PrimaryKey(autoGenerate = true)
     val memoId: Int,
     val libelle: String): Parcelable;

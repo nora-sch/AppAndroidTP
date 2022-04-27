@@ -8,6 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dark_blue">#143556</color>
-
-
+    <color name="background_memo">#b6d5f2</color>
+    <color name="btn_memo">#a6362b</color>
 </resources>

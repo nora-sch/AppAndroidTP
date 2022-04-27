@@ -5,4 +5,5 @@
     <dimen name="marg_dice">8dp</dimen>
     <dimen name="btn_text">26dp</dimen>
     <dimen name="page_padding">16dp</dimen>
+    <dimen name="memo_text">18sp</dimen>
 </resources>

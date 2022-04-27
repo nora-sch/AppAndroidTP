@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppAndroidTP">
         <activity
+            android:name=".activities.DetailMemoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.MemoActivity"
             android:exported="true" />
         <activity

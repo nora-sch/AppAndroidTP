@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_memo"
+    tools:context=".fragments.DetailFragment">
+
+    <TextView
+        android:id="@+id/memo_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/memo_text"
+        android:gravity="start"
+        android:text="@string/hello_blank_fragment"
+        />
+
+</FrameLayout>
