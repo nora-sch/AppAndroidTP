@@ -42,7 +42,7 @@ class MemoActivity : AppCompatActivity() {
         val listeMemos = AppDatabaseMemoHelper.getDatabase(this).memosDAO().getListeMemos();
 
         // Adapter :
-        memoAdapter = MemoAdapter(listeMemos.toMutableList());
+        memoAdapter = MemoAdapter(listeMemos.toMutableList(), this);
         recyclerView.adapter = memoAdapter;
 
     }
