@@ -6,43 +6,48 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.formationandroid.appandroidtp.R
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 class NombreEntierActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nombre_entier)
-
-
     }
 
     fun calculer(view: View) {
         val editText : EditText = findViewById(R.id.number_saisie);
-        val saisie = (editText.text.toString()).toLong();
+        val saisie = editText.text.toString();
+        val progress : ProgressBar = findViewById(R.id.number_progress);
+        val textViewResult: TextView = findViewById(R.id.number_result);
+        val textViewNumber: TextView = findViewById(R.id.number_display);
+        if(saisie != "") {
+            progress.visibility = View.VISIBLE;
+            textViewNumber.text = "";
 
-        CoroutineScope(Dispatchers.IO).launch {
+            CoroutineScope(Dispatchers.IO).launch {
+                delay(1500);
 
-            withContext(Dispatchers.Main){
-                val textViewResult: TextView = findViewById(R.id.number_result);
-                val textViewNumber: TextView = findViewById(R.id.number_display);
-                if(isNbPremier(saisie)) {
-                    textViewResult.text = "Ce nombre est premier!";
-                    textViewNumber.text = saisie.toString();
-                    textViewNumber.setTextColor(Color.GREEN);
-                }else{
-                    textViewResult.text = "Ce nombre n'est pas premier!";
-                    textViewNumber.text = saisie.toString();
-                    textViewNumber.setTextColor(Color.RED);
+                withContext(Dispatchers.Main) {
+                    if (isNbPremier(saisie.toLong())) {
+                        textViewResult.text = "Ce nombre est premier!";
+                        textViewNumber.text = saisie.toString();
+                        textViewNumber.setTextColor(Color.GREEN);
+                    } else {
+                        textViewResult.text = "Ce nombre n'est pas premier!";
+                        textViewNumber.text = saisie.toString();
+                        textViewNumber.setTextColor(Color.RED);
+                    }
+                    progress.visibility = View.INVISIBLE;
                 }
             }
+            editText.setText("");
         }
-       editText.setText("");
     }
 
     private fun isNbPremier(nombre : Long): Boolean{
