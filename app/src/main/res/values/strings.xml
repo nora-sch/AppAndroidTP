@@ -16,4 +16,5 @@ Carrot cake marzipan apple pie powder soufflé donut. Halvah topping candy canes
     <string name="default_text">Hello</string>
     <string name="legende_favori">Vous avez appuié sur l\'étoile</string>
     <string name="libelle_contacts">Content Provider Permissions</string>
+    <string name="libelle_nombre">Nombre Premier</string>
 </resources>
