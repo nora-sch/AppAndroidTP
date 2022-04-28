@@ -29,7 +29,7 @@ class NombreEntierActivity : AppCompatActivity() {
         if(saisie != "") {
             progress.visibility = View.VISIBLE;
             textViewNumber.text = "";
-
+            textViewResult.text = "";
             CoroutineScope(Dispatchers.IO).launch {
                 delay(1500);
 
