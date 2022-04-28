@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.formationandroid.appandroidtp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,13 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppAndroidTP">
         <activity
+            android:name=".activities.PhoneContactsActivity"
+            android:exported="true"
+            android:label="@string/libelle_contacts"/>
+        <activity
             android:name=".activities.DetailMemoActivity"
-            android:label="@string/libelle_memo"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/libelle_memo" />
         <activity
             android:name=".activities.MemoActivity"
-            android:label="@string/libelle_memo"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/libelle_memo" />
         <activity
             android:name=".activities.InputMainActivity"
             android:exported="true" />
