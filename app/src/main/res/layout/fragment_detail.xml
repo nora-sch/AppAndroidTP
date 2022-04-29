@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_memo"
+    android:background="@drawable/memo_detail_background"
     tools:context=".fragments.DetailFragment">
 
     <TextView
@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@color/dark_blue"
+        android:layout_margin="@dimen/page_padding"
         android:textSize="@dimen/memo_text"
         android:gravity="start"
         android:text="@string/default_text"

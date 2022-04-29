@@ -1,5 +1,5 @@
 
-## Cas pratique 1 - Présentation7
+## Cas pratique 1 - Présentation
 <img src="https://github.com/nora-sch/AppAndroidTP/blob/main/readme_img/cas1_TP.png" alt="TP-1" width="700"/>
 <img src="https://github.com/nora-sch/AppAndroidTP/blob/main/readme_img/cas1_1.png" alt="1-1" width="250"/>
 <img src="https://github.com/nora-sch/AppAndroidTP/blob/main/readme_img/cas1_2.png" alt="1-2"/>
@@ -38,6 +38,7 @@
 ## Cas pratique 10 - Personnalisation & Drawables
 <img src="https://github.com/nora-sch/AppAndroidTP/blob/main/readme_img/cas10_TP.png" alt="TP-10" width="700"/>
 <img src="https://github.com/nora-sch/AppAndroidTP/blob/main/readme_img/cas10_1.png" alt="10-1" width="250"/>
+<img src="https://github.com/nora-sch/AppAndroidTP/blob/main/readme_img/cas10_3.png" alt="10-3" width="250"/>
 <img src="https://github.com/nora-sch/AppAndroidTP/blob/main/readme_img/cas10_2.png" alt="10-2" width="500"/>
 
 ## Cas pratique 13 - Content Provider & Permissions

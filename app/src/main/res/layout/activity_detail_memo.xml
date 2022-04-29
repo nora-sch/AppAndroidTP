@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".activities.DetailMemoActivity"
     android:id="@+id/conteneur_detail"
-    android:padding="@dimen/page_padding"
     android:background="@color/background_memo">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
